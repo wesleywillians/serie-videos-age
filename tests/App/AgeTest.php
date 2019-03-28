@@ -13,7 +13,7 @@ class AgeTest extends TestCase {
         $dob->setDate(1984,9,8);
 
         $age = new \App\Age($dob, $today);
-        $this->assertEquals(33, $age->calculate());
+        $this->assertEquals(32, $age->calculate());
     }
 
 }
