@@ -6,4 +6,5 @@ COPY . /usr/share/nginx
 RUN curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer && \
     composer install && \
-    ln -s public html
+    ln -s public html && \
+    vendor/bin/phpunit
