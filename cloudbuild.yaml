@@ -7,8 +7,8 @@ steps:
 
 # Run tests
 - id: Running tests
-  name: gcr.io/cloud-builders/ubuntu
-  args: ['/bin/sh','vendor/bin/phpunit'] 
+  name: gcr.io/cloud-builders/docker
+  args: ['ps'] 
 
 # Push Images
 - id: Pushing  Image
