@@ -5,6 +5,11 @@ steps:
   name: gcr.io/cloud-builders/docker
   args: ['build','-t', 'gcr.io/$PROJECT_ID/init:$SHORT_SHA', '-f', 'Dockerfile', '.']
 
+# Run tests
+- id: Running tests
+  name: gcr.io/cloud-builders/docker
+  args: ['/bin/sh','vendor/bin/phpunit'] 
+
 # Push Images
 - id: Pushing  Image
   name: gcr.io/cloud-builders/docker
